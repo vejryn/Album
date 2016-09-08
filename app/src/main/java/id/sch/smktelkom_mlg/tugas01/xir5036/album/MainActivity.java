@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         //ini untuk nama
         String namadp = etNamaDp.getText().toString();
         String namabl = etNamaBl.getText().toString();
-        tvHasil.setText("Nama pemesan :" + namadp + " " + namabl + " ");
+        tvHasil.setText("Nama pemesan :" + namadp + " " + namabl + "");
         //ini untuk checkbox
 
         String hasil = "Item yang dipesan :\n";
