@@ -83,19 +83,19 @@
                 android:layout_height="wrap_content"
                 android:text="Album Monokrom" />
 
+            <CheckBox
+                android:id="@+id/checkBoxPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poster Monokrom" />
+
+            <CheckBox
+                android:id="@+id/checkBoxBM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buku Tulus : Monokrom" />
+
         </RadioGroup>
-
-        <CheckBox
-            android:id="@+id/checkBoxPM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Poster Monokrom" />
-
-        <CheckBox
-            android:id="@+id/checkBoxBM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buku Tulus : Monokrom" />
 
         <TextView
             android:id="@+id/textView2"
@@ -107,17 +107,22 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kilat 1 Hari" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cepat" />
+            <RadioButton
+                android:id="@+id/radioButtonKilat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kilat 1 Hari" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCepat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cepat" />
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView3"
@@ -154,11 +159,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center_horizontal" />
-
-        <TextView
-            android:id="@+id/textViewHasilItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

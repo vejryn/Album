@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -14,9 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etNamaDp, etNamaBl;
     Button bK;
-    TextView tvHasil, tvHasilItem;
+    TextView tvHasil;
     Spinner spProvinsi;
     CheckBox cbAM, cbPM, cbBM;
+    RadioButton rbK, rbC;
 
 
     @Override
@@ -31,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
         cbAM = (CheckBox) findViewById(R.id.checkBoxAM);
         cbPM = (CheckBox) findViewById(R.id.checkBoxPM);
         cbBM = (CheckBox) findViewById(R.id.checkBoxBM);
-        tvHasilItem = (TextView) findViewById(R.id.textViewHasilItem);
+
+//ini untuk Radio Button
+        rbK = (RadioButton) findViewById(R.id.radioButtonKilat);
+        rbC = (RadioButton) findViewById(R.id.radioButtonCepat);
+
 //spinner
         spProvinsi = (Spinner) findViewById(R.id.spinnerProvinsi);
 
@@ -44,23 +50,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void doProcess() {
         //ini untuk nama
         String namadp = etNamaDp.getText().toString();
         String namabl = etNamaBl.getText().toString();
-        tvHasil.setText("Nama pemesan :" + namadp + " " + namabl + "");
-        //ini untuk checkbox
 
+        //ini untuk checkbox
         String hasil = "Item yang dipesan :\n";
         int startlen = hasil.length();
         if (cbAM.isChecked()) hasil += cbAM.getText() + "\n";
         if (cbPM.isChecked()) hasil += cbPM.getText() + "\n";
         if (cbBM.isChecked()) hasil += cbBM.getText() + "\n";
-
         if (hasil.length() == startlen) hasil += "Tidak ada yang dipilih";
-        tvHasilItem.setText(hasil);
+
+        //ini untuk radio button
+        String hasil2 = null;
+        if (rbK.isChecked()) {
+            hasil2 = rbK.getText().toString();
+        } else if (rbC.isChecked()) {
+            hasil2 = rbC.getText().toString();
+        } else {
+            hasil2 = "Belum memilih";
+        }
+        //ini untuk spinner
+        String provinsi = spProvinsi.getSelectedItem().toString();
+
+        tvHasil.setText("Nama pemesan :\n" + namadp + " " + namabl + "\n\n" + hasil + "\n Metode Pengiriman :\n" + hasil2 + "\n\n" + provinsi);
+
     }
 }
