@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         //ini untuk spinner
         String provinsi = spProvinsi.getSelectedItem().toString();
 
-        tvHasil.setText("Nama pemesan :\n" + namadp + " " + namabl + "\n\n" + hasil + "\n Metode Pengiriman :\n" + hasil2 + "\n\n" + provinsi);
+        tvHasil.setText("Nama pemesan :\n" + namadp + " " + namabl + "\n\n" + hasil + "\n\n Metode Pengiriman :\n" + hasil2 + "\n\n" + "Provinsi Tujuan :\n" + provinsi);
 
     }
 }
