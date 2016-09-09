@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText etNamaDp, etNamaBl;
+    EditText etNamaDp, etNamaBl, etAlamat;
     Button bK;
     TextView tvHasil;
     Spinner spProvinsi;
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //ini untuk Nama dan hasil TextView 1 yang untuk nama
         etNamaDp = (EditText) findViewById(R.id.editTextNamaDepan);
         etNamaBl = (EditText) findViewById(R.id.editTextNamaBelakang);
+        etAlamat = (EditText) findViewById(R.id.editTextAlamat);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
 //ini untuk Checkbox
         cbAM = (CheckBox) findViewById(R.id.checkBoxAM);
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         //ini untuk nama
         String namadp = etNamaDp.getText().toString();
         String namabl = etNamaBl.getText().toString();
+        String alamat = etAlamat.getText().toString();
 
         //ini untuk checkbox
         String hasil = "Item yang dipesan :\n";
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         //ini untuk spinner
         String provinsi = spProvinsi.getSelectedItem().toString();
 
-        tvHasil.setText("Nama pemesan :\n" + namadp + " " + namabl + "\n\n" + hasil + "\n\n Metode Pengiriman :\n" + hasil2 + "\n\n" + "Provinsi Tujuan :\n" + provinsi);
+        tvHasil.setText("Nama pemesan :\n" + namadp + " " + namabl + "\n\n" + hasil + "\n\n Metode Pengiriman :\n" + hasil2 + "\n\n" + "Provinsi Tujuan :\n" + provinsi + "\n" + alamat);
 
     }
 }
