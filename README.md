@@ -3,9 +3,7 @@ Aplikasi "Pemesanan Album"
 Aplikasi ini dapat digunakan untuk mempermudah pemesanan album khususnya band Tulus. Dalam aplikasi juga ada pemilihan metode pengiriman, item apa saja yang dibeli dll.
 
 Screenshot Aplikasi :
-http://imgur.com/a/4XpZE
-http://imgur.com/a/Zahsi
-http://imgur.com/a/E8Vn4
+
 
 Untuk link APK. Silahkan dibuka link dibawah ini.
 https://drive.google.com/file/d/0BxZMIE4ZfEdQU09wa19fbmE5WVE/view?usp=sharing
